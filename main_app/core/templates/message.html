@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <input type="email" name="sender" placeholder="Sender Name..." />
+        <input type="email" name="receiver" placeholder="Receiver Name..." />
+        <input type="text" name="text" placeholder="Type the message..." />
+
+       
+
+
+        <button type="submit">Send</button>
+    </form>
+    <div>
+        {% for message in data %}
+
+        <p> {{message.sender}} => {{message.text}} => {{message.receiver}} </p>
+
+        {% endfor %}
+    </div>
+</body>
+</html>
